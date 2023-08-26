@@ -1,5 +1,10 @@
+@using Data.Enums
+
 <MudNavMenu>
-	<MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
-	<MudNavLink Href="/servers" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Home">Servers</MudNavLink>
-	<MudNavLink Href="/about" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Home">About</MudNavLink>
+	<MudNavLink Href="@Pages.Home" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
+	<MudNavLink Href="@Pages.Library" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Book">Library</MudNavLink>
+	<MudNavLink Href="@Pages.CurrentlyReading" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.MenuBook">Currently Reading</MudNavLink>
+	<MudNavLink Href="@Pages.Import" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.CloudDownload">Import</MudNavLink>
+	<MudNavLink Href="@Pages.Explore" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Map">Explore</MudNavLink>
+	<MudNavLink Href="@Pages.Settings" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Settings">Settings</MudNavLink>
 </MudNavMenu>

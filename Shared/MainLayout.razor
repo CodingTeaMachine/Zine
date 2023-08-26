@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@inject IConfiguration Configuration
 
 <MudThemeProvider IsDarkMode="true"/>
 <MudDialogProvider/>
@@ -10,13 +11,13 @@
 	<MudAppBar Elevation="1" Dense="true">
 		<MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@DrawerToggle"/>
 		<MudSpacer/>
-		<MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Link="https://github.com/MudBlazor/MudBlazor" Target="_blank"/>
+		<MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" Link="@Configuration?["GithubURL"]" Target="_blank"/>
 	</MudAppBar>
 	<MudDrawer @bind-Open="@_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="1" Variant="DrawerVariant.Mini">
 		<NavMenu/>
 	</MudDrawer>
 	<MudMainContent>
-		<MudContainer MaxWidth="MaxWidth.Large">
+		<MudContainer MaxWidth="MaxWidth.Large" Class="pt-10">
 			@Body
 		</MudContainer>
 	</MudMainContent>
