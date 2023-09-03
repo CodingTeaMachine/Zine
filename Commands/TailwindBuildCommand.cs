@@ -4,7 +4,7 @@ namespace Zine.Commands;
 
 public class TailwindBuildCommand
 {
-	private const string InputFilePath = "./Styles/app.css";
+	private const string InputFilePath = "Assets/Styles/app.css";
 	private const string OutputFilePath = "./wwwroot/css/build/app.css";
 	private readonly ProcessStartInfo _tailwindStartInfo = new()
 	{

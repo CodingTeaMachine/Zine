@@ -1,0 +1,16 @@
+<div class="w-56 h-96 hover:scale-110 hover:cursor-pointer transition duration-150 grid grid-rows-6">
+	<div class="row-span-5 flex justify-center items-center">
+		<MudImage Src="@Src" Elevation="5" Class="aspect-comic-cover h-64 rounded-md mx-auto"/>
+	</div>
+	<div class="text-lg text-center w-100">@Title</div>
+</div>
+
+@code {
+
+	[Parameter]
+	public string? Src { get; set; }
+
+	[Parameter]
+	public string? Title { get; set; }
+
+}

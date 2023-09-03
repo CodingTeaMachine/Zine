@@ -1,5 +1,33 @@
 ﻿@page "/library"
+@using Zine.Data.Repositories
+@using Zine.Data.Models
+@using Zine.Data
+@inject ComicBookContext Context;
 
 <PageTitle>Zine - Library</PageTitle>
 
-<h1>Hello Library</h1>
+<PageLabel Icon="@Icons.Material.Filled.Book">Library</PageLabel>
+
+<div class="container">
+	<MudGrid Justify="Justify.FlexStart">
+		@foreach (var comicBook in ComicBooks)
+		{
+			<MudItem>
+				<ComicCard Src="/img/The_Darkness_1_c01.jpg" Title="@comicBook.Title"/>
+			</MudItem>
+		}
+	</MudGrid>
+</div>
+
+
+@code {
+	private IEnumerable<ComicBook> ComicBooks { get; set; }
+
+	private ComicBookRepository _comicBookRepository { get; set; }
+
+	protected override void OnInitialized()
+	{
+		_comicBookRepository = new(Context);
+		ComicBooks = _comicBookRepository.GetAll();
+	}
+}

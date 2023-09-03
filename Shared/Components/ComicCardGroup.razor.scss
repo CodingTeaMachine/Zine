@@ -1,0 +1,15 @@
+::deep .covers {
+
+	img:nth-child(1) {
+
+	}
+
+	img:nth-child(2) {
+		transform: rotate(-10deg);
+		top: 32px;
+	}
+
+	img:nth-child(3) {
+		transform: rotate(10deg);
+	}
+}

@@ -1,5 +1,9 @@
 {
+  "scripts": {
+    "sass": "sass"
+  },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.5"
+    "@tailwindcss/forms": "^0.5.5",
+    "sass": "^1.66.1"
   }
 }

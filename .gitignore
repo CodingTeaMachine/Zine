@@ -1,7 +1,19 @@
 package-lock.json
 wwwroot/css/build/*
+wwwroot/css/app.css
+wwwroot/css/global.css
+*.css.map
+
+Shared/*/*.css
+Assets/*/*.css
 
 
+Assets/Comics/*
+Assets/Images/The_Darkness_1_c01.jpg
+
+Data/Database/*
+
+Migrations/*
 # User-specific files
 *.suo
 *.user

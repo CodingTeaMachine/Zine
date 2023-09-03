@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./**/*.{razor,html}'],
   theme: {
-    extend: {},
+    extend: {
+      aspectRatio: {
+        'comic-cover': '663/1024'
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
